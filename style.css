@@ -14,7 +14,7 @@
     width: 80vw;
     display: flex;
     perspective: 1080px;
-   /*  position: relative; */
+    position: relative;
     align-items: center;
     justify-content: center;
     
@@ -22,54 +22,26 @@
 
 .box1{
     background: url(./assets/img1.jpg);
-    background-size: contain;
-    background-position: center center;
-    border: solid 1px #000;
-    background-repeat: no-repeat;
 }
 .box2{
     background: url(./assets/img2.jpg);
-    background-size: contain;
-    background-position: center center;
-    border: solid 1px #000;
-    background-repeat: no-repeat;
 }
 .box3{
     background: url(./assets/img3.jpg);
-    background-size: contain;
-    background-position: center center;
-    border: solid 1px #000;
-    background-repeat: no-repeat;
 }
 .box4{
     background: url(./assets/img4.jpg);
-    background-size: contain;
-    background-position: center center;
-    border: solid 1px #000;
-    background-repeat: no-repeat;
 }
 .box5{
     background: url(./assets/img5.jpg);
-    background-size: contain;
-    background-position: center center;
-    border: solid 1px #000;
-    background-repeat: no-repeat;
 }
 .box6{
     background: url(./assets/img6.jpg);
-    background-size: contain;
-    background-position: center center;
-    border: solid 1px #000;
-    background-repeat: no-repeat;
-
 }
 .box7{
     background: url(./assets/img7.jpg);
-    background-size: contain;
-    background-position: center center;
-    border: solid 1px #000;
-    background-repeat: no-repeat;
 }
+/* selecciono a todos los elementos que tengas la clase slider y la que la clase contenga la palabra "box" */
 .slider [class*="box"]{
     /* float left */
     overflow: hidden;
@@ -77,8 +49,14 @@
     transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     position: absolute;
     background-color: #fff;
+    /* common style */
+    background-size: contain;
+    background-position: center center;
+    border: solid 1px #000;
+    background-repeat: no-repeat;
 }
 
+/* nth-child()selecciona entre hermanos los que tengan la posición que este dentro del parentesis  */
 .slider [class*="box"]:nth-child(7),
 .slider [class*="box"]:nth-child(1)
 {
@@ -159,6 +137,7 @@
     -webkit-animation: firstChild 1s;
     animation: firstChild 1s;
 }
+
 /* ANIMATION */
 @-webkit-keyframes firstChild{
     0%{
